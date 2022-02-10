@@ -114,6 +114,12 @@ main {
   align-items: center;
 }
 
+p {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
 #picture-div {
   grid-area: picture;
   display: flex;
@@ -138,13 +144,77 @@ main {
 }
 
 #full-description {
-  display: none;
+  /* display: none; */
+  color: grey;
 }
 
 
 @media (min-width:768px) {
-  body{
+  /* body{
     background-color: blue;
-  }
+  } */
   
+
+
+  /* main {
+    grid-template-columns: 50% 50%;
+  } */
+
+  main {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "status name"
+    "picture occupation"
+    "picture description"
+    "contact offer";
+
+
+
+    /* "status"
+    "picture"
+    "name"
+    "occupation"
+    "offer"
+    "contact"; */
+    height: 211px;
+    width:  350px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #brand {
+    background-color: lightgray;
+    border-left: 2px solid green;
+  }
+
+  #full-description {
+  
+    /* padding: 30px; */
+  }
+
+  #name-div {
+    background-color: lightgrey;
+   
+  }
+
+  #offer {
+    background-color: lightgray;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-bottom: 0;
+    /* padding-top: 57px; */
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
 }
